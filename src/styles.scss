@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+}
+
+// --------------------------
+// Variables
+// --------------------------
+
+@mixin linx($link, $visit, $hover, $active) {
+  a {
+    text-decoration: none;
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      background-color: $hover;
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+// --------------------------
+// Links
+// --------------------------
+
+
+
+// --------------------------
+// Nav
+// --------------------------
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 50px;
+  padding: 0 20px;
+  background: silver;
+}
+
+// Apply to all children of nav ele
+.nav > * {
+  padding-right: 20px;
+}
+.nav .nav-main {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+//include the mixin that contains the a, this is the same as doing a bunch of nav a
+.nav {
+  font-weight: bold;
+  @include linx(black, black, rgb(173, 173, 173), rgba(255, 255, 255, 0));
+}
+.main {
+  // padding: 0 20px;
+}
