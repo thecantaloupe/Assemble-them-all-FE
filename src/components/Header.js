@@ -6,7 +6,6 @@ const Header = (props) => {
       <span className="nav-main">
         <Link to="/"> Home Button </Link>
       </span>
-      <Link to="/route2"> Tab 2 </Link>
     </div>
   );
 };
