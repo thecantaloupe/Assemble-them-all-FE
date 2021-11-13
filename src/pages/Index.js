@@ -2,11 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Index = (props) => {
-  
-const [newForm, setNewForm] = useState({
-  title: "",
-  url: "",
-});
+  const [newForm, setNewForm] = useState({
+    title: "",
+    url: "",
+  });
 
 // handleChange function
 const handleChange = (event) => {
@@ -15,6 +14,7 @@ const handleChange = (event) => {
 //handle submit function for form
 const handleSubmit = (event) => {
   event.preventDefault();
+  props.createBookmark(newForm)
   setNewForm({
     title: "",
     url: "",
@@ -24,7 +24,7 @@ const handleSubmit = (event) => {
 
 //loaded function
 const loaded = () => {
-  return props.people.map((bookmarked) => (
+  return props.bookmark.map((bookmarked) => (
     <div key={bookmarked._id} className="bookmarked">
       <Link to={`/bookmark/${bookmarked._id}`}><h1>{bookmarked.title}</h1></Link>
       <h3>{bookmarked.url}</h3>
@@ -37,7 +37,7 @@ const loading = () => {
 };
 return (
   <section>
-    <form onsubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
     <input
     type="text"
     value={newForm.title}
