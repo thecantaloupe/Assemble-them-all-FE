@@ -20,7 +20,7 @@ const getBookmark = async () => {
 
 //create bookmark data => post request
 const createBookmark = async (bookmarked) => {
-  //post request to create people
+  //post request to create bookmark
   await fetch(URL, {
     method: "post",
     headers: {
@@ -67,7 +67,7 @@ useEffect(() => getBookmark(), []);
           render={(rp) => (
             <Show 
             {...rp}
-            people={people}
+            bookmark={bookmark}
             updateBookmark={updateBookmark}
             deleteBookmark={deleteBookmark}
           />
