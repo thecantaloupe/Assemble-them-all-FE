@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
+import Auth from "./Auth/Auth";
 
 const Main = (props) => {
   //setting the state
@@ -60,6 +61,9 @@ const Main = (props) => {
       <Switch>
         <Route exact path="/">
           <Index bookmark={bookmark} createBookmark={createBookmark} />
+        </Route>
+        <Route path="/auth">
+          <Auth />
         </Route>
         <Route
           path="/bookmark/:id"
