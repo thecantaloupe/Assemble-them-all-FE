@@ -18,7 +18,7 @@ const Main = (props) => {
     setBookmark(data);
   };
 
-  //create bookmark data => post request
+  //create bookmark data => post request = function is passed to child, and which then fills in form data to be posted
   const createBookmark = async (bookmarked) => {
     //post request to create bookmark
     await fetch(URL, {

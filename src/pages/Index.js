@@ -1,5 +1,6 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom";
+import Input from "./Input"
 
 const Index = (props) => {
   const [newForm, setNewForm] = useState({
@@ -38,19 +39,15 @@ const loading = () => {
 return (
   <section>
     <form onSubmit={handleSubmit}>
-    <input
-    type="text"
+    <Input
     value={newForm.title}
     name="title"
-    placeholder="title"
-    onChange={handleChange}
+    handleChange={handleChange}
     />
-    <input
-    type="text"
+    <Input
     value={newForm.url}
     name="url"
-    placeholder="url"
-    onChange={handleChange}
+    handleChange={handleChange}
     />
   <input type="submit" value="Add new bookmark" />
     </form>

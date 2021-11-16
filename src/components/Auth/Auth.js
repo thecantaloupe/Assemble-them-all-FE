@@ -6,60 +6,69 @@ import { GoogleLogin } from 'react-google-login'
 import Icon from "./Icon";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { login, signup } from "../../actions/Auth"
 
-
+// initial state for form data
+const initialState = { firstName: '', lastName: '', email: '', password: '', confPass: ''}
 
 const Auth = () => {
-
+    // initialize state handle
     const [showPass, setShowPass] = useState(false);
     const [isSignup, setIsSignup] = useState(false);
+    const [formData, setFormData] = useState(initialState)
+    // dispatch for redux flow
     const dispatch = useDispatch();
     const history = useHistory();
 
-
+    // handler to toggle password visibility
     const togglePassword = (event) => {
         event.preventDefault();
         setShowPass(!showPass);
     }
-
+    const pass = (showPass ? "text" : "password")
+    // handler to toggle login vs sign up fields
     const handleToggle = (event) => {
         setIsSignup(!isSignup)
         setShowPass(false)
       }
-
-    const pass = (showPass ? "text" : "password")
-
-      const googleSuccess = async (res) => {
-        console.log("Google sign-in Succeeded")
-        const result = res?.profileObj;
-        const token = res?.tokenId;
-
-        try {
-            dispatch({ type: 'AUTH', data: { result, token } });
-            history.push('/')
-        } catch (error) {
-            console.log(error)
+      // handleChange function for form
+      const handleChange = (event) => {
+        setFormData({ ...formData, [event.target.name]: event.target.value });
+      };
+    
+      // handleSubmit function for form submission
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        if (isSignup){
+          //pass history to navigate and formData to get into database
+          //dispatch - signup action - with formData and history
+          dispatch(signup(formData, history))
+        } else {
+          dispatch(login(formData, history))
         }
-      }
+        console.log(formData)
+      };
+    
+    //google auth
+    const googleSuccess = async (res) => {
+      console.log("Google sign-in Succeeded")
+      // /?. prevents crash if value is null
+      const result = res?.profileObj;
+      const token = res?.tokenId;
 
+      try {
+          dispatch({ type: 'AUTH', data: { result, token } });
+          history.push('/')
+      } catch (error) {
+          console.log(error)
+      }
+    }
       const googleFailure = (error) => {
           console.log(error)
           console.log("Google sign-in failed. This is painful")
       }
 
 
-  // handleChange function for form
-  const handleChange = (event) => {
-    // setEditForm({ ...editForm, [event.target.name]: event.target.value });
-  };
-
-  // handleSubmit function for form submission
-  const handleSubmit = (event) => {
-    // event.preventDefault();
-    // props.updateBookmark(editForm, bookmarked._id);
-    // // redirect bookmark back to index
-    // props.history.push("/");
-  };
 
   return (
     <div className="container">
@@ -77,6 +86,7 @@ const Auth = () => {
             <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
             <Input name="password" label="Password" handleChange={handleChange} type={pass} />
             <button className="auth" onClick={togglePassword}>Show Password</button>
+            {/* && is ternary notation but with no else on false */}
             { isSignup && <Input name="confPass" label="Repeat Password" handleChange={handleChange} type={pass} /> }
             <GoogleLogin 
                 clientId="304928940408-de8cbhprfiu9quvliu8gj4huahd75pho.apps.googleusercontent.com"

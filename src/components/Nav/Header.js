@@ -4,16 +4,7 @@ import icon from "./peng-removebg-preview.png"
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
-// for testing before oath
-// let user = {
-//   result: {
-//     name: "Zachary",
-//     imageUrl: "https://i.imgur.com/abJvztN.png",
-//     charAt: "ZG"
-//   }
-// }
-// // uncoment to test login logout
-// user = null
+
 
 const Header = (props) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -23,7 +14,6 @@ const Header = (props) => {
 
 
   const logout = () => {
-    console.log("clicked")
     dispatch({type: 'LOGOUT'});
     history.push('/');
     setUser(null);
@@ -33,7 +23,6 @@ const Header = (props) => {
     const token = user?.token;
     setUser(JSON.parse(localStorage.getItem('profile')))
   }, [location]);
-
   return (
     <div className="nav">
       <span className="nav-main">
@@ -41,10 +30,10 @@ const Header = (props) => {
         <img src={icon} alt="icon" height="60" />
       </span>
       <span className="nav-user">
+        {/* if the user is not null, by virtue of being in local storage than display the user avatar/name.etc and if user is null then display login button! */}
         {user ? (
           <div className="nav-user-profile">
-            <img id="avatar" alt={user.result.name} src={user.result.imageUrl}/>{user.result.name.charAt}
-            {/* maybe need style or styled component for button */}
+            <img id="avatar" alt={user.result.name} src={user.result.imageUrl}/>
             <h4>{user.result.name}</h4> 
             <button onClick={logout} >Logout</button>
           </div>
