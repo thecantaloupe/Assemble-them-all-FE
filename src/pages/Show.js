@@ -4,7 +4,7 @@ function Show(props) {
   //grab id from params
   const id = props.match.params.id;
   //save bookmark standalone variable
-  const people = props.bookmark
+  const bookmark = props.bookmark
   //find the bookmark to show
   const bookmarked = bookmark.find((singleBookmark) => {
     return singleBookmark._id === id;
