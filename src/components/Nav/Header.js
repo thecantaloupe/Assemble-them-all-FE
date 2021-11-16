@@ -26,7 +26,7 @@ const Header = (props) => {
   return (
     <div className="nav">
       <span className="nav-main">
-        <Link to="/"> Peng-Pals </Link>
+        <Link to="/"> iMARK </Link>
         <img src={icon} alt="icon" height="60" />
       </span>
       <span className="nav-user">
