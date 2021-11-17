@@ -36,7 +36,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    padding-left: 200px 200px 200px 200px;
+    padding-left: 20px 20px 20px 200px;
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 1px 10px #ddd,
