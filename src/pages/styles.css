@@ -11,7 +11,6 @@
 }
 
 .card2 {
-    background-color: pink;
     width: 400px;
     height: 100px;
     margin: 20px auto;
@@ -28,15 +27,16 @@
 }
 
 .bookmarked {
-    background-image: url("https://i.pinimg.com/originals/26/98/4a/26984a320f83615e2b134b07a0bfa6c6.jpg");
-    background-size: cover;
-    width: 400px;
+    /* background-image: url("https://cdn.wallpapersafari.com/4/89/cKZHE5.jpg");
+    background-size: cover; */
+    width: 200px;
     height: 200px;
     margin: 20px auto;
     display: inline-flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    padding-left: 200px 200px 200px 200px;
     align-items: center;
     border-radius: 10px;
     box-shadow: 1px 1px 10px #ddd,
