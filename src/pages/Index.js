@@ -18,7 +18,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
   props.createBookmark(newForm)
   setNewForm({
-    title: "https://",
+    title: "",
     url: "",
   });
 
@@ -29,7 +29,7 @@ const loaded = () => {
   return props.bookmark.map((bookmarked) => (
     <div key={bookmarked._id} className="bookmarked">
       <Link to={`/bookmark/${bookmarked._id}`}><h1>{bookmarked.title}</h1></Link>
-      <h3>{bookmarked.url}</h3>
+      <h3><a href={bookmarked.url}>{bookmarked.url}</a></h3>
     </div>
   ));
 };

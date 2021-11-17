@@ -11,7 +11,9 @@
 }
 
 .card2 {
-    background-color: pink;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
     width: 400px;
     height: 100px;
     margin: 20px auto;
@@ -28,7 +30,30 @@
 }
 
 .bookmarked {
-    background-image: url("https://i.pinimg.com/originals/26/98/4a/26984a320f83615e2b134b07a0bfa6c6.jpg");
+
+    /* display: inline-flex;
+  text-align: center; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  margin: 20px auto;
+  display: inline-flex;
+  /* width: 100%;
+  height:100%; */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd; 
+    
+    /* opacity: 0.6;
+    background: #e49364;
     background-size: cover;
     width: 400px;
     height: 200px;
@@ -42,5 +67,27 @@
     box-shadow: 1px 1px 10px #ddd,
                 -1px -1px 10px #ddd,
                 1px -1px 10px #ddd,
-                -1px 1px 10px #ddd;
+                -1px 1px 10px #ddd; */
+
 }
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+    }
+
+h1{ 
+    color: #080505;
+}
+
+h3{
+    color: #0c0505;
+}
+
