@@ -29,7 +29,6 @@ const loaded = () => {
     <div key={bookmarked._id} className="bookmarked">
       <Link to={`/bookmark/${bookmarked._id}`}><h1>{bookmarked.title}</h1></Link>
       <h3>{bookmarked.url}</h3>
-      <a href={bookmarked.url} >go to page</a>
     </div>
   ));
 };
@@ -55,9 +54,9 @@ return (
   <input type="submit" value="Add new bookmark" />
     </form>
     </div>
-    {/* <div className= "card3"> */}
+    <div className= "card3">
     {props.bookmark ? loaded() : loading()}
-    {/* </div> */}
+    </div>
   </section>
   </div>
 )
