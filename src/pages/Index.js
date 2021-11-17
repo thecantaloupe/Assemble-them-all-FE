@@ -37,7 +37,9 @@ const loading = () => {
   return <h1>Loading...</h1>
 };
 return (
+  <div className ="container2">
   <section>
+  <div className="card2">
     <form onSubmit={handleSubmit}>
     <Input
     value={newForm.title}
@@ -51,10 +53,13 @@ return (
     />
   <input type="submit" value="Add new bookmark" />
     </form>
+    </div>
+    {/* <div className= "card3"> */}
     {props.bookmark ? loaded() : loading()}
+    {/* </div> */}
   </section>
+  </div>
 )
-
 
 };
 
