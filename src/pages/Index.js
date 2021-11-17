@@ -18,7 +18,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
   props.createBookmark(newForm)
   setNewForm({
-    title: "",
+    title: "https://",
     url: "",
   });
 
