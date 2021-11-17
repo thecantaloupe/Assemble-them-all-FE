@@ -7,8 +7,9 @@
   height: 50px;
   padding: 10px 50px;
   margin: 30px;
-  background: rgba(192, 192, 192, 0.63);
+  background: #813772;
   justify-content: space-between;
+  font-family: "Comic Sans MS";
 }
 
 /* Apply to all children of nav ele */

@@ -2,12 +2,62 @@ form.authForm {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
 }
 
+html {
+    background-color: #000000;
+    font-family: 'Comic Sans MS', sans-serif;
+    text-align: center;
+    /* display: inline-flex;
+    text-align: center; */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #062f4f;
+    background-size: cover;
+    /* text-align: center; */
+}
+
+/* .App{
+    
+} */
+
+h1{ 
+    color: #FFFFFF;
+}
+
+h3{
+    color: #FFFFFF;
+}
+
+
+.container {
+    background-color: #062f4f;
+    font-family: 'Comic Sans MS', sans-serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card {
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 400px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 /* google button stolen style hehe */
 .auth {
     /* background-color: rgb(255, 255, 255); */
-    display: inline-flex;
+    display:inline-flex;
+    justify-content: center;
     align-items: center;
     /* color: rgba(0, 0, 0, 0.54); */
     box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px 0px, rgb(0 0 0 / 24%) 0px 0px 1px 0px;
@@ -15,9 +65,10 @@ form.authForm {
     border: 2px solid transparent;
     font-size: 14px;
     font-weight: 500;
-    font-family: Roboto, sans-serif;
+    font-family: Comic Sans MS, sans-serif;
     padding: 10px 10px 10px 0px;
     font-weight: 500;
-    width: 400px;
+    width: 300px;
     margin: 2px;
 }
+
