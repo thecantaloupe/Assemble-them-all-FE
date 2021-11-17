@@ -1,11 +1,12 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom";
-import Input from "./Input"
+import Input from "./Input";
+import "./styles.css";
 
 const Index = (props) => {
   const [newForm, setNewForm] = useState({
     title: "",
-    url: "",
+    url: "https://",
   });
 
 // handleChange function
@@ -18,7 +19,8 @@ const handleSubmit = (event) => {
   props.createBookmark(newForm)
   setNewForm({
     title: "",
-    url: "",
+    url: "https://",
+
   });
 
 };
@@ -28,7 +30,7 @@ const loaded = () => {
   return props.bookmark.map((bookmarked) => (
     <div key={bookmarked._id} className="bookmarked">
       <Link to={`/bookmark/${bookmarked._id}`}><h1>{bookmarked.title}</h1></Link>
-      <h3>{bookmarked.url}</h3>
+      <h3><a href={bookmarked.url}>{bookmarked.url}</a></h3>
     </div>
   ));
 };
@@ -36,25 +38,32 @@ const loaded = () => {
 const loading = () => {
   return <h1>Loading...</h1>
 };
+
+// add a div container then make the background 
 return (
+  <div className ="container2">
   <section>
+  <div className="card2">
     <form onSubmit={handleSubmit}>
     <Input
     value={newForm.title}
-    name="title"
+    name="TITLE"
     handleChange={handleChange}
     />
     <Input
     value={newForm.url}
-    name="url"
+    name="URL"
     handleChange={handleChange}
     />
   <input type="submit" value="Add new bookmark" />
     </form>
+    </div>
+    <div className= "card3">
     {props.bookmark ? loaded() : loading()}
+    </div>
   </section>
+  </div>
 )
-
 
 };
 

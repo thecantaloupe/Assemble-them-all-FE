@@ -1,8 +1,29 @@
 form.authForm {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+}
+
+button{
+    background-color: cadetblue;
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+input{
+    border-radius: 10px;
+    display: inline-flex;  
+}
+button.auth{
+    border-radius: 10px;
+    background-color: cadetblue;
+}
+input.auth{
+    background-color: cadetblue;
+    border-radius: 10px;
+
 }
 
 html {
@@ -13,29 +34,23 @@ html {
     text-align: center; */
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    background-color: #062f4f;
-    background-size: cover;
+/* body{ */
+    /* background-image: url("https://img.8wallpapers.com/uploads/2019/04/0b250b5c6e2d4731ac02f586.jpg"); */
+    /* background-size: cover; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* background-color: #062f4f; */
+    /* background-size: cover; */
     /* text-align: center; */
-}
+/* } */
 
 /* .App{
     
 } */
 
-h1{ 
-    color: #FFFFFF;
-}
-
-h3{
-    color: #FFFFFF;
-}
-
 
 .container {
-    background-color: #062f4f;
+    /* background-color: #062f4f; */
     font-family: 'Comic Sans MS', sans-serif;
     display: flex;
     justify-content: center;
@@ -43,7 +58,7 @@ h3{
 }
 
 .card {
-    background-color: #FFFFFF;
+    
     width: 400px;
     height: 400px;
     margin: 7em auto;
@@ -52,6 +67,9 @@ h3{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
 }
 /* google button stolen style hehe */
 .auth {
@@ -72,3 +90,61 @@ h3{
     margin: 2px;
 }
 
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+    }
+
+/* .container2 { */
+    /* width: 300px;
+    height: 400px; */
+    /* margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center; */
+
+/* } */
+
+/* .card2 { */
+    /* background-color: pink;
+    width: 400px;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd; */
+/* } */
+
+/* .bookmarked { */
+    /* background-image: url("https://i.pinimg.com/originals/26/98/4a/26984a320f83615e2b134b07a0bfa6c6.jpg");
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd; */
+/* } */
