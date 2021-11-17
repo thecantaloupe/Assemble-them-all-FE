@@ -7,9 +7,15 @@
   height: 50px;
   padding: 10px 50px;
   margin: 30px;
-  background: #813772;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   justify-content: space-between;
   font-family: "Comic Sans MS";
+  border-radius: 25px;
+  opacity: 1.0;
+  color: rgb(10, 8, 5);
+  
 }
 
 /* Apply to all children of nav ele */
@@ -46,5 +52,17 @@
   border-radius: 50%;
   justify-content: center;
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  }
 
 

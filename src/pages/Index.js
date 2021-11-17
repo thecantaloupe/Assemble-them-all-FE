@@ -1,6 +1,7 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom";
-import Input from "./Input"
+import Input from "./Input";
+import "./styles.css";
 
 const Index = (props) => {
   const [newForm, setNewForm] = useState({
@@ -19,6 +20,7 @@ const handleSubmit = (event) => {
   setNewForm({
     title: "",
     url: "https://",
+
   });
 
 };
@@ -36,6 +38,8 @@ const loaded = () => {
 const loading = () => {
   return <h1>Loading...</h1>
 };
+
+// add a div container then make the background 
 return (
   <div className ="container2">
   <section>
