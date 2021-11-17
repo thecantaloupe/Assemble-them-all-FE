@@ -1,11 +1,12 @@
 import { useState } from "react"; 
 import { Link } from "react-router-dom";
-import Input from "./Input"
+import Input from "./Input";
+import "./styles.css";
 
 const Index = (props) => {
   const [newForm, setNewForm] = useState({
     title: "",
-    url: "",
+    url: "https://",
   });
 
 // handleChange function
