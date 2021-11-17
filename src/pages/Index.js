@@ -47,12 +47,12 @@ return (
     <form onSubmit={handleSubmit}>
     <Input
     value={newForm.title}
-    name="title"
+    name="TITLE"
     handleChange={handleChange}
     />
     <Input
     value={newForm.url}
-    name="url"
+    name="URL"
     handleChange={handleChange}
     />
   <input type="submit" value="Add new bookmark" />
