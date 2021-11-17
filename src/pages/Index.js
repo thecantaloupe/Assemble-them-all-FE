@@ -36,6 +36,8 @@ const loaded = () => {
 const loading = () => {
   return <h1>Loading...</h1>
 };
+
+// add a div container then make the background 
 return (
   <section>
     <form onSubmit={handleSubmit}>
