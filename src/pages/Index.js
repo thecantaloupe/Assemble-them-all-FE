@@ -5,7 +5,7 @@ import Input from "./Input"
 const Index = (props) => {
   const [newForm, setNewForm] = useState({
     title: "",
-    url: "",
+    url: "https://",
   });
 
 // handleChange function
@@ -17,7 +17,7 @@ const handleSubmit = (event) => {
   event.preventDefault();
   props.createBookmark(newForm)
   setNewForm({
-    title: "",
+    title: "https://",
     url: "",
   });
 
