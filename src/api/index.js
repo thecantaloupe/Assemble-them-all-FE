@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create({ baseURL: 'http://localhost:4000'})
+const API = axios.create({ baseURL: 'https://bookmarkd-jrzz.herokuapp.com/'})
 
 // way to send session token to backend. interceptors and backend will know we are logged in
 // API.interceptors.request.use.apply((req) => {
