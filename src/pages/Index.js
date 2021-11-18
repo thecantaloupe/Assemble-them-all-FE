@@ -42,22 +42,26 @@ const loading = () => {
 // add a div container then make the background 
 return (
   <div className ="container2">
-    <section>
-      <form onSubmit={handleSubmit}>
-      <Input
-      value={newForm.title}
-      name="title"
-      handleChange={handleChange}
-      />
-      <Input
-      value={newForm.url}
-      name="url"
-      handleChange={handleChange}
-      />
-    <input type="submit" value="Add new bookmark" />
-      </form>
-      {props.bookmark ? loaded() : loading()}
-    </section>
+  <section>
+  <div className="card2">
+    <form onSubmit={handleSubmit}>
+    <Input
+    value={newForm.title}
+    name="title"
+    handleChange={handleChange}
+    />
+    <Input
+    value={newForm.url}
+    name="url"
+    handleChange={handleChange}
+    />
+  <input type="submit" value="Add new bookmark" />
+    </form>
+    </div>
+    <div className= "card3">
+    {props.bookmark ? loaded() : loading()}
+    </div>
+  </section>
   </div>
 )
 

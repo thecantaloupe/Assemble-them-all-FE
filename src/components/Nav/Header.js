@@ -37,7 +37,7 @@ const Header = (props) => {
             <h4>{user.result.name}</h4> 
             <button onClick={logout} >Logout</button>
           </div>
-        ) : (
+         ) : (
           <Link to='/auth'>
           <button >Login</button>
           </Link>
