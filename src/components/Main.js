@@ -9,7 +9,7 @@ const Main = (props) => {
   const [bookmark, setBookmark] = useState(null);
 
   //url
-  const URL = "http://localhost:4000/bookmark/";
+  const URL = "https://bookmarkd-jrzz.herokuapp.com/";
 
   //get data
   const getBookmark = async () => {
