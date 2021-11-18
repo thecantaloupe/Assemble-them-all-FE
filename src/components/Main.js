@@ -3,10 +3,12 @@ import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
 import Auth from "./Auth/Auth";
+import { useDispatch } from "react-redux";
 
 const Main = (props) => {
   //setting the state
   const [bookmark, setBookmark] = useState(null);
+  const dispatch = useDispatch()
 
   //url
   const URL = "https://bookmarkd-jrzz.herokuapp.com/";
@@ -15,6 +17,7 @@ const Main = (props) => {
   const getBookmark = async () => {
     const response = await fetch(URL);
     const data = await response.json();
+    dispatch({type: 'LOCALSTORE', data: { data }})
     setBookmark(data);
   };
 

@@ -12,13 +12,11 @@ const Header = (props) => {
   const history = useHistory()
   const location = useLocation()
 
-
   const logout = () => {
     dispatch({type: 'LOGOUT'});
     history.push('/');
     setUser(null);
   }
-
   useEffect(() => {
     const token = user?.token;
     setUser(JSON.parse(localStorage.getItem('profile')))
@@ -37,7 +35,7 @@ const Header = (props) => {
             <h4>{user.result.name}</h4> 
             <button onClick={logout} >Logout</button>
           </div>
-        ) : (
+         ) : (
           <Link to='/auth'>
           <button >Login</button>
           </Link>
