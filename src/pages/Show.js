@@ -11,9 +11,9 @@ function Show(props) {
   const id = props.match.params.id;
   //save bookmark standalone variable
   //find the bookmark to show
-  const bookmarked = bookmark.find((singleBookmark) => {
+  const bookmarked = bookmark instanceof Array ? bookmark.find((singleBookmark) => {
     return singleBookmark._id === id;
-  });
+  }): null
 
   // state for our form
   const [editForm, setEditForm] = useState(bookmarked);
@@ -36,7 +36,7 @@ function Show(props) {
     props.history.push("/");
   };
   useEffect(() => {
-    setBookmark(JSON.parse(localStorage.getItem('profile')))
+    setBookmark(JSON.parse(localStorage.getItem('bookmark')).data)
   },[]);
 
   return (
