@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 function Show(props) {
+  const [bookmark, setBookmark] = useState(JSON.parse(localStorage.getItem('bookmark')).data);
+  const dispatch = useDispatch()
+  console.log(bookmark)
+  
   //grab id from params
   const id = props.match.params.id;
   //save bookmark standalone variable
-  const bookmark = props.bookmark;
-
   //find the bookmark to show
   const bookmarked = bookmark.find((singleBookmark) => {
     return singleBookmark._id === id;
@@ -31,6 +35,9 @@ function Show(props) {
     props.deleteBookmark(bookmarked._id);
     props.history.push("/");
   };
+  useEffect(() => {
+    setBookmark(JSON.parse(localStorage.getItem('profile')))
+  },[]);
 
   return (
     <div className="bookmarked">
