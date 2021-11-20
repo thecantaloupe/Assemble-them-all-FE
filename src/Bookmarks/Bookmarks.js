@@ -8,7 +8,8 @@ const Bookmarks = () => {
   //loaded function
   const loaded = () => {
     return bookmarks.map((bookmarked) => (
-      <div key={bookmarked._id} className="bookmarked">
+      <div key={bookmarked._id} className="bookmarked"  >
+        <img src={bookmarked?.fileData } style={{width: "100px"}}/>
         <Bookmark bookmarked={bookmarked} />
       </div>
     ));
