@@ -1,18 +1,18 @@
 import axios from 'axios'
 
 const API = axios.create({ 
-    baseURL: 'https://bookmarkd-jrzz.herokuapp.com/',
+    baseURL: 'http://localhost:4000',
     headers: {"Content-Type": "application/json"}
 })
 
 
 // way to send session token to backend. interceptors and backend will know we are logged in
-// API.interceptors.request.use.apply((req) => {
-//     if(localStorage.getItem('profile')){
-//         req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`;
-//     }
-//     return req;
-// })
+API.interceptors.request.use((req) => {
+    if(localStorage.getItem('profile')){
+        req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`;
+    }
+    return req;
+})
 
 
 export const fetchBook = () => API.get('./bookmark')
