@@ -27,7 +27,7 @@ input.auth{
 }
 
 html {
-    background-color: #000000;
+    /* background-color: #000000; uncomment */
     font-family: 'Comic Sans MS', sans-serif;
     text-align: center;
     /* display: inline-flex;

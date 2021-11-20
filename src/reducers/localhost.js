@@ -3,7 +3,9 @@ import { LOCALSTORE } from '../constants/actionTypes'
 const localReducer = (state={ bookmark: null }, action) => {
     switch(action.type) {
         case LOCALSTORE:
-            localStorage.setItem('bookmark', JSON.stringify({...action?.data}));
+            let test = {}
+            test.data = {...action?.data}
+            localStorage.setItem('localstore', JSON.stringify([...action?.data]));
             return {...state, bookmark: action?.data};
         // case LOGOUT:
         //     localStorage.clear()
