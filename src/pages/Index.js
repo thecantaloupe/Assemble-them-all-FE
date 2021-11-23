@@ -1,4 +1,4 @@
-import Assembles from "../Assembles/Assemble";
+import Assembles from "../Assembles/Assembles";
 import Form from "../components/Form/Form";
 import "./styles.css";
 

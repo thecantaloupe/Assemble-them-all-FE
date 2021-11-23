@@ -7,7 +7,6 @@ function Show(props) {
   const dispatch = useDispatch()
   const history = useHistory();
   const [assemble, setAssemble] = useState(JSON.parse(localStorage.getItem('localstore')));
-
   const user = JSON.parse(localStorage.getItem("profile"));
 
 
@@ -24,13 +23,12 @@ function Show(props) {
   
   return (
 
-
     <div className="assembled">
-      <button onClick={() => dispatch(deleteAssem(assembled._id),history.push("/"))} id="delete">
-        DELETE
-      </button>
+      {/* anyone can delete anon, only creator can delete their own */}
+      {(user?.result?.googleId === assembled.creator || user?.result?._id === assembled?.creator)&&(
+        <button onClick={() => dispatch(deleteAssem(assembled._id),history.push("/"))} id="delete">DELETE</button>
+      )}
       <Form assembled={assembled} id={id} />
-
     </div>
   );
 }

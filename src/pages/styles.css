@@ -6,14 +6,13 @@ form{
    align-items: center;
 }
 .container2 {
-    /* width: 300px;
-    height: 400px; */
     margin: 40px auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+    width: 80%;
 
 }
 
@@ -35,8 +34,15 @@ form{
                 1px -1px 10px #ddd,
                 -1px 1px 10px #ddd;
 }
+.card3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+}
 
-.bookmarked {
+.assembled {
     /* background-image: url("https://cdn.wallpapersafari.com/4/89/cKZHE5.jpg");
     background-size: cover; */
    
@@ -65,6 +71,7 @@ form{
 label{
   margin-right: 5px;
 }
+
 
 @keyframes gradient {
     0% {

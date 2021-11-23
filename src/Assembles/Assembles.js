@@ -8,7 +8,8 @@ const Assembles = () => {
   //loaded function
   const loaded = () => {
     return assembles.map((assembled) => (
-      <div key={assembled._id} className="assembled">
+      <div key={assembled._id} className="assembled"  >
+        <img src={assembled?.fileData } style={{width: "100px"}}/>
         <Assemble assembled={assembled} />
       </div>
     ));
