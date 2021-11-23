@@ -7,7 +7,7 @@ import FileBase from "react-file-base64";
 
 const Form = ({ assembled, id }) => {
   const [newForm, setNewForm] = useState(
-    assembled ? assembled : { title: "", url: "https://" }
+    assembled ? assembled : { title: "" }
   );
   const history = useHistory();
   const dispatch = useDispatch();
@@ -33,13 +33,12 @@ const Form = ({ assembled, id }) => {
   };
 
   if (!user?.result?.name) {
-    return <h6>Please Sign in to create a card!!!</h6>;
+    return <h6>Please Sign in</h6>;
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <Input value={newForm.title} name="title" handleChange={handleChange} />
-      <Input value={newForm.url} name="url" handleChange={handleChange} />
       <FileBase type="file" multiple={false} onDone={({ base64 }) => setNewForm({ ...newForm, fileData: base64 })} />
       {/* hide update if not the user who made it */}
       {(user?.result?.googleId === assembled?.creator || user?.result?._id === assembled?.creator)&&(

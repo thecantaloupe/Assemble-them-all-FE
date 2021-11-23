@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 const Assemble = ({ assembled }) => {
   return (
     <>
+      <legend>{assembled.title}</legend>
       <Link to={`/assemble/${assembled._id}`}>
-        <h1>{assembled.title}</h1>
-        <h6>Made by {assembled._id?assembled.name:"anonymous user"}</h6>
+        <img src={assembled?.fileData } className="sprite" />
       </Link>
-      <h3>
-        <a href={assembled.url}>{assembled.url}</a>
-      </h3>
+      <h4>
+        Health: {assembled?.health}<br />
+        Attack: {assembled?.attack}<br />
+        Defense: {assembled?.defense}<br />
+      </h4>
+      <h6>Made by {assembled._id?assembled.name:"anonymous user"}</h6>
     </>
   );
 };

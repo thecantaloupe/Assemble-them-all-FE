@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
 import Auth from "./Auth/Auth";
-
+import Battle from "../pages/Battle";
 
 const Main = (props) => {
   const assembles = useSelector((state) => state.assembles);
@@ -17,13 +17,14 @@ const Main = (props) => {
         <Route path="/auth">
           <Auth />
         </Route>
+        <Route
+          path="/assemble/:id"
+          render={(rp) => <Show {...rp} assemble={assembles} />}
+        />
         <Route 
-          path="/assemble/:id" 
-          render={(rp) => 
-            <Show
-              {...rp} 
-              assemble={assembles}
-              />} />
+          path="/battle/:id"
+          render={(rp) => <Battle {...rp} assemble={assembles} />} 
+        />
       </Switch>
     </main>
   );

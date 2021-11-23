@@ -1,0 +1,25 @@
+img.sprite {
+    display: inline-block;
+    width: 125px;
+    height: auto;
+    border-radius: 20%;
+    box-shadow: 1px 1px 10px #ddd,
+                -1px -1px 10px #ddd,
+                1px -1px 10px #ddd,
+                -1px 1px 10px #ddd;
+}
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: lightcoral ;
+}
+legend {
+    padding: 0px 10px;
+    font-family: 'Oswald';
+    font-weight: 700;
+    background-color: white;
+    border-radius: 15%;
+    color: black;
+}
