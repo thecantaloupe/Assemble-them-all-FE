@@ -43,9 +43,7 @@ form{
 }
 
 .assembled {
-    /* background-image: url("https://cdn.wallpapersafari.com/4/89/cKZHE5.jpg");
-    background-size: cover; */
-   
+    /* overflow: scroll; */
     text-align: center;
     align-items: center;
     margin-top: 30px;

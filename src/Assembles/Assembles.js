@@ -1,17 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import Assemble from "./Assemble/Assemble";
+import './styles.css'
 
-const Assembles = () => {
+const Assembles = (props) => {
   const assembles = useSelector((state) => state.assembles);
   //loaded function
   const loaded = () => {
     return assembles.map((assembled) => (
-      <div key={assembled._id} className="assembled"  >
-        <img src={assembled?.fileData } style={{width: "100px"}}/>
+      <fieldset key={assembled._id} className="assembled"  >
         <Assemble assembled={assembled} />
-      </div>
+      </fieldset>
     ));
   };
 
