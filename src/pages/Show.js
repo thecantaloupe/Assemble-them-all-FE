@@ -8,6 +8,9 @@ function Show(props) {
   const history = useHistory();
   const [assemble, setAssemble] = useState(JSON.parse(localStorage.getItem('localstore')));
 
+  const user = JSON.parse(localStorage.getItem("profile"));
+
+
   //grab id from params
   const id = props.match.params.id;
   //save player card standalone variable
@@ -15,18 +18,19 @@ function Show(props) {
   const assembled = assemble instanceof Array ? assemble.find((singleAssemble) => {
     return singleAssemble._id === id;
   }): null
-
   useEffect(() => {
     setAssemble(JSON.parse(localStorage.getItem('localstore')))
   },[]);
-
+  
   return (
+
 
     <div className="assembled">
       <button onClick={() => dispatch(deleteAssem(assembled._id),history.push("/"))} id="delete">
         DELETE
       </button>
       <Form assembled={assembled} id={id} />
+
     </div>
   );
 }

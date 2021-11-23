@@ -36,7 +36,7 @@ const Form = ({ assembled, id }) => {
       <Input value={newForm.url} name="url" handleChange={handleChange} />
       <input
         type="submit"
-        value={id ? "Update the player card" : "Add new player card"}
+        value={id ? "Update the player card" : "Add new assemble"}
       />
     </form>
   );

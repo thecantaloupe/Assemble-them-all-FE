@@ -2,6 +2,8 @@ MERN Stack
 
 Using react, redux, router, sass, google auth
 
+mirrored from bookmark app
+
 
 
 # Getting Started with Create React App
