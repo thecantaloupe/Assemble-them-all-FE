@@ -15,10 +15,10 @@ const API = axios.create({
 // })
 
 
-export const fetchBook = () => API.get('./bookmark')
-export const createBook = (newForm) => API.post('./bookmark', newForm)
-export const updateBook = (id, updatedForm) => API.put(`./bookmark/${id}`, updatedForm)
-export const deleteBook = (id) => API.delete(`./bookmark/${id}`)
+export const fetchAssem = () => API.get('./assemble')
+export const createAssem = (newForm) => API.post('./assemble', newForm)
+export const updateAssem = (id, updatedForm) => API.put(`./assemble/${id}`, updatedForm)
+export const deleteAssem = (id) => API.delete(`./assemble/${id}`)
 
 export const login = (FormData) => API.post('./user/login',FormData)
 export const signup = (FormData) => API.post('./user/signup',FormData)

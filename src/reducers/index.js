@@ -2,6 +2,6 @@ import { combineReducers } from "redux";
 
 import auth from './auth';
 import local from './localhost';
-import bookmarks from "./bookmark";
+import assembles from "./assemble";
 
-export const reducers = combineReducers({ auth , local, bookmarks });
+export const reducers = combineReducers({ auth , local, assembles });

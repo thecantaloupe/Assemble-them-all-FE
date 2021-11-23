@@ -6,7 +6,7 @@ import Auth from "./Auth/Auth";
 
 
 const Main = (props) => {
-  const bookmarks = useSelector((state) => state.bookmarks);
+  const assembles = useSelector((state) => state.assembles);
 
   return (
     <main>
@@ -18,11 +18,11 @@ const Main = (props) => {
           <Auth />
         </Route>
         <Route 
-          path="/bookmark/:id" 
+          path="/assemble/:id" 
           render={(rp) => 
             <Show
               {...rp} 
-              bookmark={bookmarks}
+              assemble={assembles}
               />} />
       </Switch>
     </main>

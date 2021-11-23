@@ -1,9 +1,9 @@
 import * as api from '../api'
 import { CREATE, GETALL, LOCALSTORE, UPDATE, DELETE } from '../constants/actionTypes'
 
-export const getBooks = () => async (dispatch) => {
+export const getAssem = () => async (dispatch) => {
     try {
-        const {data} = await api.fetchBook()
+        const {data} = await api.fetchAssem()
         console.log(data)
         dispatch({ type: GETALL, payload: data})
         dispatch({ type: LOCALSTORE, data: data})
@@ -12,9 +12,9 @@ export const getBooks = () => async (dispatch) => {
     }  
 }
 
-export const createBook = (book) => async (dispatch) => {
+export const createAssem = (ass) => async (dispatch) => {
     try {
-        const {data} = await api.createBook(book)
+        const {data} = await api.createAssem(ass)
 
     dispatch({ type: CREATE, payload: data})
     } catch (error) {
@@ -22,9 +22,9 @@ export const createBook = (book) => async (dispatch) => {
     }  
 }
 
-export const updateBook = (id, book) => async (dispatch) => {
+export const updateAssem = (id, ass) => async (dispatch) => {
     try {
-        const {data} = await api.updateBook(id, book)
+        const {data} = await api.updateAssem(id, ass)
 
     dispatch({ type: UPDATE, payload: data})
     } catch (error) {
@@ -32,9 +32,9 @@ export const updateBook = (id, book) => async (dispatch) => {
     }  
 }
 
-export const deleteBook = (id) => async (dispatch) => {
+export const deleteAssem = (id) => async (dispatch) => {
     try {
-        await api.deleteBook(id)
+        await api.deleteAssem(id)
         console.log(id)
     dispatch({ type: DELETE, payload: id})
     } catch (error) {

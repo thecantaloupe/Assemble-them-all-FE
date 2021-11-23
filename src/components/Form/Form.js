@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Input from "./Input";
-import { createBook, getBooks, updateBook } from "../../actions/bookmark";
+import { createAssem, getAssem, updateAssem } from "../../actions/assemble";
 import { useHistory } from "react-router";
 
-const Form = ({ bookmarked, id }) => {
+const Form = ({ assembled, id }) => {
   const [newForm, setNewForm] = useState(
-    bookmarked ? bookmarked : { title: "", url: "https://" }
+    assembled ? assembled : { title: "", url: "https://" }
   );
   const history = useHistory();
   const dispatch = useDispatch();
@@ -20,14 +20,14 @@ const Form = ({ bookmarked, id }) => {
     event.preventDefault();
 
     if (id) {
-      dispatch(updateBook(id, newForm));
+      dispatch(updateAssem(id, newForm));
       // need better way hmmmm
       // updateStorage('localstore', [{title:newForm.title},{title:newForm.title}])
       // so much better
-      dispatch(getBooks())
+      dispatch(getAssem())
       history.push("/");
     }
-    dispatch(createBook(newForm));
+    dispatch(createAssem(newForm));
   };
 
   return (
@@ -36,7 +36,7 @@ const Form = ({ bookmarked, id }) => {
       <Input value={newForm.url} name="url" handleChange={handleChange} />
       <input
         type="submit"
-        value={id ? "Update the bookmark" : "Add new bookmark"}
+        value={id ? "Update the player card" : "Add new player card"}
       />
     </form>
   );
