@@ -1,4 +1,4 @@
-import Bookmarks from "../Bookmarks/Bookmarks";
+import Assembles from "../Assembles/Assembles";
 import Form from "../components/Form/Form";
 import "./styles.css";
 
@@ -10,7 +10,7 @@ const Index = (props) => {
         <div className="card2">
           <Form />
         </div>
-        <Bookmarks />
+        <Assembles />
       </section>
     </div>
   );

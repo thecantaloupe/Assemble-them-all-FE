@@ -15,10 +15,12 @@ API.interceptors.request.use((req) => {
 })
 
 
-export const fetchBook = () => API.get('./assemble')
-export const createBook = (newForm) => API.post('./assemble', newForm)
-export const updateBook = (id, updatedForm) => API.put(`./assemble/${id}`, updatedForm)
-export const deleteBook = (id) => API.delete(`./assemble/${id}`)
+
+export const fetchAssem = () => API.get('./assemble')
+export const createAssem = (newForm) => API.post('./assemble', newForm)
+export const updateAssem = (id, updatedForm) => API.put(`./assemble/${id}`, updatedForm)
+export const deleteAssem = (id) => API.delete(`./assemble/${id}`)
+
 
 export const login = (FormData) => API.post('./user/login',FormData)
 export const signup = (FormData) => API.post('./user/signup',FormData)
