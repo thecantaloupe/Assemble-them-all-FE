@@ -44,7 +44,7 @@ const Form = ({ assembled, id }) => {
       {(user?.result?.googleId === assembled?.creator || user?.result?._id === assembled?.creator)&&(
       <input
         type="submit"
-        value={id ? "Update the bookmark" : "Add new bookmark"}
+        value={id ? "Update the fighter" : "Add new fighter"}
       />)}
     </form>
   );
