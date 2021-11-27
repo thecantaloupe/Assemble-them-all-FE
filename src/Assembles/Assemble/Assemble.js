@@ -14,6 +14,7 @@ const Assemble = ({ assembled }) => {
         Defense: {assembled?.defense}<br />
       </h4>
       <h6>Made by {assembled._id?assembled.name:"anonymous user"}</h6>
+      
     </>
   );
 };

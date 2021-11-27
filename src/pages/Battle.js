@@ -5,6 +5,7 @@ import { useHistory } from "react-router";
 import { deleteAssem } from "../actions/assemble";
 import Form from "../components/Form/Form";
 import Assemble from "../Assembles/Assemble/Assemble";
+import Result from "../Assembles/Assemble/Result";
 
 function Battle(props) {
   const dispatch = useDispatch();
@@ -52,7 +53,7 @@ function Battle(props) {
     if (opponent.health <= 0){
         opponent.health = 0
         victoryMessage(assembled.name,assembled.title)
-        return
+        return 
     }
     let adjective = ""
     if (damageBlocked < (0.45 * assembled.attack)) {
@@ -93,6 +94,7 @@ function Battle(props) {
 
     console.log(assembled)
     console.log(randomCard)
+
   const fightFunction = () => {
     console.log("Player 1 has chosen", assembled.title, "\nStats:");
     console.log(assembled);
@@ -117,6 +119,9 @@ function Battle(props) {
       <h1 style={{ color: "white" }}>VS</h1>
       <fieldset key={assembled._id} className="assembled">
         <Assemble assembled={randomCard} />
+      </fieldset>
+      <fieldset key={assembled._id} className="assembled">
+        <Result assembled={randomCard} />
       </fieldset>
       
     </>
