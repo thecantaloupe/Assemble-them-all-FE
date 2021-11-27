@@ -29,6 +29,9 @@ function Battle(props) {
     assemble instanceof Array ? assemble.filter((ass) => ass._id !== id) : null;
   const randomCard = assembled2[Math.floor(Math.random() * assembled2.length)];
 
+  
+
+
   useEffect(() => {
     setAssemble(JSON.parse(localStorage.getItem("localstore")));
   }, []);
@@ -60,10 +63,10 @@ function Battle(props) {
         adjective = slickMoves[randomNum(slickMoves.length,0)]
     }
     //attack message
-    console.log(`\n`+assembled.title + ` attacked attempting to deal ${assembled.attack} damage!\n` + opponent.name + ` ${adjective} blocked ${damageBlocked} damage!\n${opponent.name} takes ${damageDealt} damage.`)
+   console.log(`\n`+assembled.title + ` attacked attempting to deal ${assembled.attack} damage!\n` + opponent.name + ` ${adjective} blocked ${damageBlocked} damage!\n${opponent.name} takes ${damageDealt} damage.`)
     }
     randomCard.hit = (opponent) =>{
-        if (randomCard.health ==0) {return}
+        if (randomCard.health ===0) {return}
         //defense equation makes damage variable, set below so max defense is 10
         const damageDealt = Math.floor(randomCard.attack * (1 - (randomNum(opponent.defense,1)/10)))
         const damageBlocked = randomCard.attack - damageDealt
@@ -81,9 +84,11 @@ function Battle(props) {
         } else {
             adjective = slickMoves[randomNum(slickMoves.length,0)]
         }
+        
         //attack message
         console.log(`\n`+randomCard.title + ` attacked attempting to deal ${randomCard.attack} damage!\n` + opponent.name + ` ${adjective} blocked ${damageBlocked} damage!\n${opponent.name} takes ${damageDealt} damage.`)
         }
+        
    
 
     console.log(assembled)
@@ -99,8 +104,10 @@ function Battle(props) {
       console.log("P1 Health ", assembled.health);
       console.log("P2 Health ", randomCard.health + "\n");
     }
+    
   };
   fightFunction()
+  
 
   return (
     <>
@@ -111,6 +118,7 @@ function Battle(props) {
       <fieldset key={assembled._id} className="assembled">
         <Assemble assembled={randomCard} />
       </fieldset>
+      
     </>
   );
 }
