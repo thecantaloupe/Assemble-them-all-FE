@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Input from './Input'
-import lock from './lock.png'
 import { GoogleLogin } from 'react-google-login'
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";

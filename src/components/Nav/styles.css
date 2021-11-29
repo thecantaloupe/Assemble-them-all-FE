@@ -1,6 +1,7 @@
 /*--------------------------
  Nav
 -------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Press+Start+2P&display=swap');
 .nav {
   display: flex;
   align-items: center;
@@ -27,6 +28,7 @@
   font-size: 1.5em;
   display: flex;
   align-items: center;
+  font-family: 'Bungee Shade', cursive;
 }
 
 .nav-user {
