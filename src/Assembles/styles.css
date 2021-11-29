@@ -8,6 +8,7 @@ img.sprite {
                 1px -1px 10px #ddd,
                 -1px 1px 10px #ddd;
 }
+
 fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -15,6 +16,7 @@ fieldset {
     margin: 20px 0;
     background-color: lightcoral ;
 }
+
 legend {
     padding: 0px 10px;
     font-family: 'Oswald';
