@@ -114,6 +114,7 @@ function Battle(props) {
 
   return (
     <>
+    
       <fieldset key={assembled._id} className="assembled">
         <Assemble assembled={assembled} />
       </fieldset>

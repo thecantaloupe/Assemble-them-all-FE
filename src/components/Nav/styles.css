@@ -44,9 +44,13 @@ h4{
 }
 
 .nav-user {
+  /* background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite; */
   display: flex;
   justify-content: flex-end;
-  width: 400px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 .nav-user-profile {
