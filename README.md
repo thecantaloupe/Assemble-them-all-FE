@@ -2,7 +2,7 @@
 
 By Justin, Rachel, Zach, & Zen
 
-This is a card fight game where you battle other members cards and you can create, update, and delete your cards.
+This is a card game where you can create, update, and delete your user cards and battle other members' cards.
 
 **Instructions**
 1. Log in or create an account.
