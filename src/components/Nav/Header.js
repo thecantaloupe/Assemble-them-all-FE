@@ -32,7 +32,7 @@ const Header = (props) => {
     <div className="nav">
       <span className="nav-main">
         <img src={icon} alt="icon" height="60" />
-        <Link to="/"> KADOFIGHT! </Link>
+        <Link to="/"> KADO  FIGHT! </Link>
       </span>
       <span className="nav-user">
         {/* if the user is not null, by virtue of being in local storage than display the user avatar/name.etc and if user is null then display login button! */}
@@ -44,7 +44,7 @@ const Header = (props) => {
           </div>
          ) : (
           <Link to='/auth'>
-          <button >Login</button>
+          <button>Login</button>
           </Link>
         )}
       </span>

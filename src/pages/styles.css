@@ -1,13 +1,12 @@
-/* main{
-    position: relative;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
   margin: 0;
   font-family: 'Press Start 2P', cursive;
-  /* background-image: url("https://images5.alphacoders.com/608/thumb-1920-608323.png"); */
+  background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif');
+  background-repeat: no-repeat;
   background-size: cover;
+  margin: auto;
+  min-height: 100vh;
 }
 
 form {
@@ -26,8 +25,7 @@ form {
 }
 
 .card2 {
-    background: #964F4CFF;
-    opacity: .9;
+    background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     width: 400px;
@@ -51,22 +49,20 @@ form {
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-around;
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .assembled {
-    /* overflow: scroll; */
     text-align: center;
     align-items: center;
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 25px 25px;
-    background: #964F4CFF;
-    opacity: .8
-    ;
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 5s ease infinite; */
+    animation: gradient 5s ease infinite;
     width: 200px;
     height: 300px;
     display: inline-flex;
@@ -109,3 +105,4 @@ label {
         font-size: 20px;
         display: inline-flex;
     }
+

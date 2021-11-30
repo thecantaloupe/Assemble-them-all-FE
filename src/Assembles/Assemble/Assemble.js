@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Assemble = ({ assembled }) => {
+
+const Assemble = ({ assembled , functions }) => {
+  // const [main, changeMain] = functions
+  console.log(assembled)
   return (
     <>
       <legend>{assembled.title}</legend>
