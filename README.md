@@ -38,7 +38,7 @@ Auth Page: user can login using Google auth, create an account, and show or hide
 <img width="1240" alt="https://user-images.githubusercontent.com/23408915/144143516-fc291ef3-96bd-4cbc-a17d-cfefa78d392b.png">
 
 Show Page: displays all users cards including the user card and user is able to add more cards
-<img width="1240" <a href="https://ibb.co/5YXrCXp"><img src="https://i.ibb.co/CJpb4pC/user-page.png" alt="user-page" border="0"></a>
+<a href="https://ibb.co/5YXrCXp"><img src="https://i.ibb.co/CJpb4pC/user-page.png" alt="user-page" width="1240" border="0"></a>
 
 Index Page: user is able to edit, update, and delete card
 <img width="1240" alt="battle page" src="https://user-images.githubusercontent.com/23408915/144143000-75c3fecf-e41a-4436-82bf-9bf7aa007420.png">
