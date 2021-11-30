@@ -32,13 +32,13 @@ react-file-base64
 **Screenshots**
 
 Main Page: displays all users cards and redirects to login page
-<img width="1240" alt="https://user-images.githubusercontent.com/23408915/144143754-19840375-f963-4d40-b5e8-e646487c7483.png">
+<img width="1240" alt="battle page" src="https://user-images.githubusercontent.com/23408915/144143014-cf9c7009-82fc-4f2a-b89c-5f1518c44d73.png">
 
 Auth Page: user can login using Google auth, create an account, and show or hide password when typing.
-<img width="1240" alt="https://user-images.githubusercontent.com/23408915/144143516-fc291ef3-96bd-4cbc-a17d-cfefa78d392b.png">
+<img width="1240" alt="battle page" src="https://user-images.githubusercontent.com/23408915/144143014-cf9c7009-82fc-4f2a-b89c-5f1518c44d73.png">
 
 Show Page: displays all users cards including the user card and user is able to add more cards
-<a href="https://ibb.co/5YXrCXp"><img src="https://i.ibb.co/CJpb4pC/user-page.png" alt="user-page" border="0"></a>
+<img width="1240" alt="battle page" src="https://user-images.githubusercontent.com/23408915/144143014-cf9c7009-82fc-4f2a-b89c-5f1518c44d73.png">
 
 Index Page: user is able to edit, update, and delete card
 <img width="1240" alt="battle page" src="https://user-images.githubusercontent.com/23408915/144143000-75c3fecf-e41a-4436-82bf-9bf7aa007420.png">
