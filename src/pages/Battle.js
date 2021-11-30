@@ -103,7 +103,7 @@ function Battle(props) {
     }
     
   };
-  fightFunction()
+  // fightFunction()
   
   return (
     <>

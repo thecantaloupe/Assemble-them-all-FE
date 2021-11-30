@@ -1,6 +1,6 @@
 import { Link, useHistory, useLocation} from "react-router-dom";
 import "./styles.css";
-import icon from "./penguin.png"
+import icon from "./spade.png"
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import decode from 'jwt-decode'
@@ -44,7 +44,7 @@ const Header = (props) => {
           </div>
          ) : (
           <Link to='/auth'>
-          <button >Login</button>
+          <button>Login</button>
           </Link>
         )}
       </span>
