@@ -6,10 +6,11 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', cursive;
-  /* background-image: url("https://images5.alphacoders.com/608/thumb-1920-608323.png"); */
-  background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif'); 
-  background-repeat: repeat;
+  background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif');
+  background-repeat: no-repeat;
   background-size: cover;
+  margin: auto;
+  min-height: 100vh;
 }
 
 form {
@@ -52,6 +53,8 @@ form {
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-around;
+  max-height: 80vh;
+  overflow: auto;
 }
 
 .assembled {
