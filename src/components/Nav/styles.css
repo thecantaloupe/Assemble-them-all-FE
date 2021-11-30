@@ -22,6 +22,8 @@
 /* Apply to all children of nav ele */
 .nav > * {
   padding-right: 20px;
+  overflow: auto;
+
 }
 
 .nav .nav-main {
@@ -34,12 +36,14 @@
 
 .nav-user {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   width: 400px;
 }
 
 .nav-user-profile {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   width: 400px;
