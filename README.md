@@ -1,6 +1,6 @@
 **Kado Fight!**
 
-By Justin, Rachel, Zach, & Zen
+By <a href="https://github.com/justinrasler">Justin</a>, <a href="https://github.com/rachelohu">Rachel</a>, <a href="https://github.com/thecantaloupe">Zach</a>, & <a href="https://github.com/zenology101">Zen</a>.
 
 This is a card game where you can create, update, and delete your user cards and battle other members' cards.
 
