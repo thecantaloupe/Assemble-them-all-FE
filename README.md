@@ -1,4 +1,4 @@
-**KadoFight!**
+**Kado Fight!**
 
 By Justin, Rachel, Zach, & Zen
 
@@ -13,7 +13,7 @@ This is a card fight game where you battle other members cards and you can creat
 **Features**
 
 Full authorazition page including Google Auth.
-Full CRUD functions: Create, Read, Update, and Delete your own cards and battle with other members.
+CRUD functions: Create, Read, Update, and Delete your own cards and battle with other members.
 
 
 **Technologies**
@@ -25,6 +25,10 @@ Express.js
 Netlify
 MongoDB
 React
+Redux
+Axios
+jwt-decode
+react-file-base64
 
 **Screenshots**
 

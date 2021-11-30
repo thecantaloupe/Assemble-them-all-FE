@@ -7,6 +7,8 @@ body {
   margin: 0;
   font-family: 'Press Start 2P', cursive;
   /* background-image: url("https://images5.alphacoders.com/608/thumb-1920-608323.png"); */
+  background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif'); 
+  background-repeat: repeat;
   background-size: cover;
 }
 
@@ -26,7 +28,7 @@ form {
 }
 
 .card2 {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     width: 400px;
@@ -60,9 +62,9 @@ form {
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 25px 25px;
-    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 5s ease infinite; */
+    animation: gradient 5s ease infinite;
     width: 200px;
     height: 300px;
     display: inline-flex;

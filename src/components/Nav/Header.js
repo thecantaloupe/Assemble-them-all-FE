@@ -1,6 +1,6 @@
 import { Link, useHistory, useLocation} from "react-router-dom";
 import "./styles.css";
-import icon from "./spade.png"
+import icon from "./penguin.png"
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import decode from 'jwt-decode'
@@ -32,7 +32,7 @@ const Header = (props) => {
     <div className="nav">
       <span className="nav-main">
         <img src={icon} alt="icon" height="60" />
-        <Link to="/"> KADOFIGHT! </Link>
+        <Link to="/"> KADO  FIGHT! </Link>
       </span>
       <span className="nav-user">
         {/* if the user is not null, by virtue of being in local storage than display the user avatar/name.etc and if user is null then display login button! */}
