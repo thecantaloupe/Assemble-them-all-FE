@@ -105,7 +105,6 @@ function Battle(props) {
   };
   fightFunction()
   
-
   return (
     <>
       <fieldset key={assembled._id} className="assembled">
@@ -116,7 +115,9 @@ function Battle(props) {
         <Assemble assembled={randomCard} />
       </fieldset>
       <fieldset key={assembled._id} className="assembled">
-        <Result assembled={randomCard} />
+        <Result assembled/>
+        {/* to have winning card appear  */}
+        {/* <Result assembled={randomCard} /> */}
       </fieldset>
     </>
   );
