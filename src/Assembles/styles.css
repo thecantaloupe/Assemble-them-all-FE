@@ -1,5 +1,6 @@
 img.sprite {
     display: inline-block;
+    overflow: auto;
     width: 125px;
     height: auto;
     border-radius: 20%;

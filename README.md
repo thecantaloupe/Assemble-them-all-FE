@@ -22,6 +22,7 @@ JavaScript
 Express.js
 Netlify
 MongoDB
+Heroku
 React
 Redux
 Axios

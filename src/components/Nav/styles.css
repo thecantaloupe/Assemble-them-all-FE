@@ -23,6 +23,8 @@
 /* Apply to all children of nav ele */
 .nav > * {
   padding-right: 20px;
+  overflow: auto;
+
 }
 
 .nav .nav-main {
@@ -48,6 +50,7 @@ h4{
   background-size: 400% 400%;
   animation: gradient 5s ease infinite; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   width: 300px;
   border-radius: 10px;
@@ -58,6 +61,7 @@ h4{
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   /* background: white; */

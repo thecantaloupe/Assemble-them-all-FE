@@ -37,9 +37,11 @@ legend{
     height: 100px;
     margin: 20px auto;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /* align-content: space-around; */
     justify-content: space-evenly;
+    overflow: hidden;
+    flex-direction: column;
     align-items: center;
     /* border-radius: 10px; */
     box-shadow: 1px 1px 10px #ddd,
@@ -75,7 +77,7 @@ legend{
     display: inline-flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     /* border-radius: 10px; */
     box-shadow: 1px 1px 10px #ddd,
