@@ -8,10 +8,10 @@
   height: 50px;
   padding: 10px 50px;
   margin: 30px;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%; */
   /* background:rgb(190, 153, 96); */
-  animation: gradient 5s ease infinite;
+  /* animation: gradient 5s ease infinite; */
   justify-content: space-between;
   font-family: "Comic Sans MS";
   border-radius: 25px;
@@ -26,13 +26,21 @@
 }
 
 .nav .nav-main {
+  background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   font-weight: bold;
   font-size: 1.5em;
   display: flex;
   align-items: center;
-  background: #964F4CFF;
+  /* background: #964F4CFF; */
   border-radius: 10px;
   font-family: 'Bungee Shade', cursive;
+}
+
+h4{
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .nav-user {
@@ -42,12 +50,16 @@
 }
 
 .nav-user-profile {
+  background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #964F4CFF;
+  /* background: white; */
+  /* color: white; */
   border-radius: 10px;
-  width: 400px;
+  width: 300px;
 }
 
 #avatar {

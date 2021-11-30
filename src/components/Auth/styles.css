@@ -18,7 +18,8 @@ button {
 
 input {
     border-radius: 10px;
-    display: inline-flex;  
+    display: inline-flex; 
+    background-color: #6c68a0; 
 }
 
 button.auth {
@@ -37,6 +38,8 @@ input.auth {
     cursor: pointer;
 
 }
+
+
 
 html {
     /* background-color: #000000; uncomment */

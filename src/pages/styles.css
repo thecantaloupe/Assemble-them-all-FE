@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', cursive;
-  background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif');
+  /* background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif'); */
+  background-image: url(https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-45.gif);
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
@@ -11,6 +12,10 @@ body {
 
 form {
    align-items: center;
+}
+
+legend{
+  font-family: "Bungee shade", cursive;
 }
 
 .container2 {
@@ -28,7 +33,7 @@ form {
     background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    width: 400px;
+    width: 300px;
     height: 100px;
     margin: 20px auto;
     display: flex;
@@ -60,9 +65,11 @@ form {
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 25px 25px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-color: goldenrod;
+    opacity: .9;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite; */
     width: 200px;
     height: 300px;
     display: inline-flex;
@@ -106,3 +113,8 @@ label {
         display: inline-flex;
     }
 
+    label{
+      font-family: "Bungee shade", cursive;
+  }
+
+  
