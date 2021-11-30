@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Input from './Input'
-import lock from './lock.png'
 import { GoogleLogin } from 'react-google-login'
-import Icon from "./Icon";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { login, signup } from "../../actions/Auth"
@@ -68,12 +66,9 @@ const Auth = () => {
           console.log("Google sign-in failed. This is painful")
       }
 
-
-
   return (
     <div className="container">
         <div className="card">
-            <img id="avatar" alt="locked-out" src={lock} />
             <h3>{isSignup ? 'Sign up' : 'Sign In'}</h3>
         <form className="authForm" onSubmit={handleSubmit}>
             { isSignup && (
@@ -95,7 +90,7 @@ const Auth = () => {
                     onClick={renderProps.onClick} 
                     disabled={renderProps.disabled} 
                     variant="contained" 
-                    ><Icon />Google Sign In</button>
+                    > Google Sign In</button>
                 )}
                 onSuccess={googleSuccess}
                 onFailure={googleFailure}  

@@ -1,6 +1,7 @@
 /*--------------------------
  Nav
 -------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Press+Start+2P&display=swap');
 .nav {
   display: flex;
   align-items: center;
@@ -9,30 +10,34 @@
   margin: 30px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
+  /* background:rgb(190, 153, 96); */
   animation: gradient 5s ease infinite;
   justify-content: space-between;
   font-family: "Comic Sans MS";
   border-radius: 25px;
   opacity: 1.0;
-  color: rgb(10, 8, 5);
-  
+  color: rgb(10, 8, 5); 
 }
 
 /* Apply to all children of nav ele */
 .nav > * {
   padding-right: 20px;
 }
+
 .nav .nav-main {
   font-weight: bold;
   font-size: 1.5em;
   display: flex;
   align-items: center;
+  font-family: 'Bungee Shade', cursive;
 }
+
 .nav-user {
   display: flex;
   justify-content: flex-end;
   width: 400px;
 }
+
 .nav-user-profile {
   display: flex;
   justify-content: space-between;
@@ -64,5 +69,3 @@
     background-position: 0% 50%;
   }
   }
-
-

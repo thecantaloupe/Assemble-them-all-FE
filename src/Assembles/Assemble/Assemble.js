@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Assemble = ({ assembled }) => {
+
+const Assemble = ({ assembled , functions }) => {
+  // const [main, changeMain] = functions
+  console.log(assembled)
   return (
     <>
       <legend>{assembled.title}</legend>
@@ -14,6 +17,7 @@ const Assemble = ({ assembled }) => {
         Defense: {assembled?.defense}<br />
       </h4>
       <h6>Made by {assembled._id?assembled.name:"anonymous user"}</h6>
+      
     </>
   );
 };
