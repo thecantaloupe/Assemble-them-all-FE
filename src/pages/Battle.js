@@ -30,9 +30,6 @@ function Battle(props) {
     assemble instanceof Array ? assemble.filter((ass) => ass._id !== id) : null;
   const randomCard = assembled2[Math.floor(Math.random() * assembled2.length)];
 
-  
-
-
   useEffect(() => {
     setAssemble(JSON.parse(localStorage.getItem("localstore")));
   }, []);
@@ -89,8 +86,6 @@ function Battle(props) {
         //attack message
         console.log(`\n`+randomCard.title + ` attacked attempting to deal ${randomCard.attack} damage!\n` + opponent.name + ` ${adjective} blocked ${damageBlocked} damage!\n${opponent.name} takes ${damageDealt} damage.`)
         }
-        
-   
 
     console.log(assembled)
     console.log(randomCard)
@@ -110,7 +105,6 @@ function Battle(props) {
   };
   fightFunction()
   
-
   return (
     <>
       <fieldset key={assembled._id} className="assembled">
@@ -125,7 +119,6 @@ function Battle(props) {
         {/* to have winning card appear  */}
         {/* <Result assembled={randomCard} /> */}
       </fieldset>
-      
     </>
   );
 }
