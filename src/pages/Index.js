@@ -4,13 +4,17 @@ import "./styles.css";
 
 const Index = (props) => {
   // add a div container then make the background
+  const [main, changeMain] = props.functions
+  changeMain("index")
   return (
     <div className="container2">
       <section>
         <div className="card2">
           <Form />
         </div>
-        <Assembles />
+        <Assembles 
+        functions={[main, changeMain]}
+        />
       </section>
     </div>
   );

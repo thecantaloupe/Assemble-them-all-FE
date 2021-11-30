@@ -6,11 +6,14 @@ import './styles.css'
 
 const Assembles = (props) => {
   const assembles = useSelector((state) => state.assembles);
+  const [main, changeMain] = props.functions
   //loaded function
   const loaded = () => {
     return assembles.map((assembled) => (
       <fieldset key={assembled._id} className="assembled"  >
-        <Assemble assembled={assembled} />
+        <Assemble assembled={assembled} 
+        functions={[main, changeMain]}
+        />
       </fieldset>
     ));
   };

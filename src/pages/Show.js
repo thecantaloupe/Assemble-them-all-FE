@@ -12,7 +12,12 @@ function Show(props) {
     JSON.parse(localStorage.getItem("localstore"))
   );
   const user = JSON.parse(localStorage.getItem("profile"));
+  // hook for main class
+  const [main, changeMain] = props.functions;
+  // hook for random card
+  const [randomCard, changeRandomCard] = props.rando;
 
+  changeMain("showpage");
   //grab id from params
   const id = props.match.params.id;
   //save player card standalone variable
@@ -23,6 +28,11 @@ function Show(props) {
           return singleAssemble._id === id;
         })
       : null;
+
+  const assembled2 = assemble instanceof Array ? assemble.filter((ass) => ass._id !== id) : null;
+  changeRandomCard(assembled2[Math.floor(Math.random() * assembled2.length)]);
+
+
   useEffect(() => {
     setAssemble(JSON.parse(localStorage.getItem("localstore")));
   }, []);

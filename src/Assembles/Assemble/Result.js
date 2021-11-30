@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Result = ({ assembled }) => {
+const Result = ({ assembled, message }) => {
     return (
       <>
         
         <legend>{assembled.title}</legend>
         Health Remaining: {assembled?.health}<br />
         <h4>
-          CONGRATS, YOU WON!!!
+          {message}
         </h4>
 
       </>
