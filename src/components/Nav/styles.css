@@ -10,12 +10,13 @@
   margin: 30px;
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
   background-size: 400% 400%;
-  background:rgb(190, 153, 96);
+  background:r964F4CFF;
   /* animation: gradient 5s ease infinite; */
   justify-content: space-between;
   font-family: "Comic Sans MS";
   border-radius: 25px;
-  opacity: 1.0;
+  opacity: .8;
+  
   color: rgb(10, 8, 5); 
 }
 
@@ -29,6 +30,8 @@
   font-size: 1.5em;
   display: flex;
   align-items: center;
+  background: #964F4CFF;
+  border-radius: 10px;
   font-family: 'Bungee Shade', cursive;
 }
 
@@ -42,6 +45,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #964F4CFF;
+  border-radius: 10px;
   width: 400px;
 }
 

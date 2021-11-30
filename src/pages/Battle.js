@@ -95,15 +95,20 @@ function Battle(props) {
     console.log(assembled);
     console.log("Player 2 has chosen", randomCard.title, "\nStats:");
     console.log(randomCard);
-    while (assembled.health > 1 && randomCard.health > 1) {
-        assembled.hit(randomCard);
-        randomCard.hit(assembled);
-      console.log("P1 Health ", assembled.health);
-      console.log("P2 Health ", randomCard.health + "\n");
-    }
+    
     
   };
   fightFunction()
+
+  const attack = () => {
+    while (assembled.health > 1 && randomCard.health > 1) {
+      assembled.hit(randomCard);
+      randomCard.hit(assembled);
+    console.log("P1 Health ", assembled.health);
+    console.log("P2 Health ", randomCard.health + "\n");
+  }
+  };
+  
   
   return (
     <>
@@ -114,13 +119,17 @@ function Battle(props) {
       <fieldset key={assembled._id} className="assembled">
         <Assemble assembled={randomCard} />
       </fieldset>
-      <fieldset key={assembled._id} className="assembled">
-        <Result assembled/>
-        {/* to have winning card appear  */}
-        {/* <Result assembled={randomCard} /> */}
-      </fieldset>
+      <button onClick = {attack}>Fight</button>
+      
     </>
   );
 }
 
 export default Battle;
+
+
+{/* <fieldset key={assembled._id} className="assembled"> */}
+        // <Result assembled/>
+        {/* to have winning card appear  */}
+        {/* <Result assembled={randomCard} /> */}
+      {/* </fieldset> */}
