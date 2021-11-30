@@ -50,4 +50,4 @@ Battle Page: user battles another card and the result is displayed
 1. Add an animation to display the winning card
 2. Position the fighting cards correctly
 3. Have a board that displays all the fighting actions
-4. Add an API
+4. Create an API to hold all the stats
