@@ -136,3 +136,10 @@ function Battle(props) {
 }
 
 export default Battle;
+
+
+{/* <fieldset key={assembled._id} className="assembled"> */}
+        // <Result assembled/>
+        {/* to have winning card appear  */}
+        {/* <Result assembled={randomCard} /> */}
+      {/* </fieldset> */}

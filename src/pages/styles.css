@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: 'Press Start 2P', cursive;
-  background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif');
+  /* background-image: url('http://test.ultralinx.co/wp-content/uploads/2020/03/1_plr4dld.gif'); */
+  background-image: url(https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-45.gif);
   background-repeat: no-repeat;
   background-size: cover;
   margin: auto;
@@ -11,6 +12,10 @@ body {
 
 form {
    align-items: center;
+}
+
+legend{
+  font-family: "Bungee shade", cursive;
 }
 
 .container2 {
@@ -28,15 +33,17 @@ form {
     background: linear-gradient(-45deg, #ebee52, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    width: 400px;
+    width: 300px;
     height: 100px;
     margin: 20px auto;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    /* align-content: space-around; */
     justify-content: space-evenly;
+    overflow: hidden;
+    flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 1px 1px 10px #ddd,
                 -1px -1px 10px #ddd,
                 1px -1px 10px #ddd,
@@ -60,17 +67,19 @@ form {
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 25px 25px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-color: goldenrod;
+    opacity: .9;
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite; */
     width: 200px;
     height: 300px;
     display: inline-flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 1px 1px 10px #ddd,
                 -1px -1px 10px #ddd,
                 1px -1px 10px #ddd,
@@ -106,3 +115,10 @@ label {
         display: inline-flex;
     }
 
+    label, h4, h6{
+      font-family: "Bungee shade", cursive;
+  }
+
+
+
+  

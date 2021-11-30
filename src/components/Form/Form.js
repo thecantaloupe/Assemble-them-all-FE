@@ -4,6 +4,7 @@ import Input from "./Input";
 import { createAssem, getAssem, updateAssem } from "../../actions/assemble";
 import { useHistory } from "react-router";
 import FileBase from "react-file-base64";
+import "./styles.css";
 
 const Form = ({ assembled, id }) => {
   const [newForm, setNewForm] = useState(
@@ -44,7 +45,7 @@ const Form = ({ assembled, id }) => {
       {(user?.result?.googleId === assembled?.creator || user?.result?._id === assembled?.creator)&&(
       <input
         type="submit"
-        value={id ? "Update the fighter" : "Add new fighter"}
+        value={id ? "Update the fighter" : "Add a new fighter"}
       />)}
     </form>
   );
